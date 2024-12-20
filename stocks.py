@@ -14,7 +14,7 @@ from merger_pdf import merge_pdfs_in_folder
 # Đường dẫn root
 root_path = "D:/Stock"
 
-symbols_file = 'symbol.txt'
+symbols_file = 'symbols.txt'
 
 end_date = datetime.now()
 start_date = end_date - timedelta(weeks=4)
