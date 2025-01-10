@@ -12,7 +12,7 @@ from merger_pdf import merge_pdfs_in_folder
 
 
 # Đường dẫn root
-root_path = "D:/Stock"
+root_path = "D:/StockAutoReport"
 
 symbols_file = 'symbol.txt'
 
