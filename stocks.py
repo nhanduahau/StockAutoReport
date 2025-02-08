@@ -20,8 +20,8 @@ end_date = datetime.now()
 start_date = end_date - timedelta(weeks=4)
 
 # Format ngày dạng dd/mm/yyyy
-end_date_str = end_date.strftime("%d/%m/%Y")
-start_date_str = start_date.strftime("%d/%m/%Y")
+end_date_str = end_date.strftime("%m/%d/%Y")
+start_date_str = start_date.strftime("%m/%d/%Y")
 
 # Tạo chuỗi start_str và end_str để đặt tên folder
 start_str = start_date.strftime("%d%m%Y")
@@ -36,6 +36,7 @@ os.makedirs(pdf_folder, exist_ok=True)
 
 page_index = 1
 page_size = 20
+
 
 base_url = "https://cafef.vn/du-lieu/Ajax/PageNew/DataHistory/PriceHistory.ashx"
 
@@ -73,7 +74,7 @@ for symbol in symbols:
         ws.page_margins.footer = 0
         # Header
         ws.merge_cells("A1:K1")
-        ws["A1"] = f"Mã cổ phiếu: {symbol} - {start_date_str} - {end_date_str}"
+        ws["A1"] = f"Mã cổ phiếu: {symbol} - {start_str} - {end_str}"
         ws["A1"].alignment = Alignment(horizontal='center', vertical='center')
         
         ws.merge_cells("A2:A3")
